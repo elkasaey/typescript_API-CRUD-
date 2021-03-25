@@ -26,7 +26,7 @@ itemsRouter.get("/:id", async (req: Request, res: Response) => {
       return res.status(200).send(item);
     }
 
-    res.status(404).send("item not found");
+    res.status(404).send({"massage":"Resource not found"});
   } catch (e) {
     res.status(500).send(e.message);
   }
